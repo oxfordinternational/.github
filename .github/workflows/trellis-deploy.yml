@@ -52,12 +52,12 @@ on:
         required: false
       ITINERIS_NPM_AUTH_TOKEN:
         required: false
-      ZEROTIER_CENTRAL_TOKEN:
-        required: true
-      ZEROTIER_GATEWAY_IP:
-        required: true
-      ZEROTIER_NETWORK_ID:
-        required: true
+      # ZEROTIER_CENTRAL_TOKEN:
+      #   required: true
+      # ZEROTIER_GATEWAY_IP:
+      #   required: true
+      # ZEROTIER_NETWORK_ID:
+      #   required: true
 
 jobs:
   deploy:
