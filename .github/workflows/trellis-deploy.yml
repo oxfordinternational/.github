@@ -86,14 +86,14 @@ jobs:
           echo "HOST_IP=${HOST_IP}" >> "${GITHUB_ENV}"
         working-directory: trellis
 
-      - name: Install ZeroTier
-        uses: zerotier/github-action@v1.0.3
-        with:
-          network_id: ${{ secrets.ZEROTIER_NETWORK_ID }}
-          auth_token: ${{ secrets.ZEROTIER_CENTRAL_TOKEN }}
+      # - name: Install ZeroTier
+      #   uses: zerotier/github-action@v1.0.3
+      #   with:
+      #     network_id: ${{ secrets.ZEROTIER_NETWORK_ID }}
+      #     auth_token: ${{ secrets.ZEROTIER_CENTRAL_TOKEN }}
 
-      - name: Route environment traffic through ZeroTier
-        run: sudo ip route add "${HOST_IP}/32" via "${{ secrets.ZEROTIER_GATEWAY_IP }}"
+      # - name: Route environment traffic through ZeroTier
+      #   run: sudo ip route add "${HOST_IP}/32" via "${{ secrets.ZEROTIER_GATEWAY_IP }}"
 
       - name: Checkout Bedrock
         uses: actions/checkout@v4
